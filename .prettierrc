@@ -1,0 +1,44 @@
+{
+    "singleQuote": true,
+    "parser": "flow",
+    "tabWidth": 2,
+    "bracketSpacing": false,
+    "printWidth": 100,
+    "useTabs": false,
+    "semi": true,
+    "trailingComma": "all",
+    "arrowParens": "avoid",
+    "proseWrap": "never",
+    "endOfLine": "auto",
+    "overrides": [
+        {
+            "files": [
+                "*.ts",
+                "*.tsx"
+            ],
+            "options": {
+                "parser": "typescript"
+            }
+        },
+        {
+            "files": [
+                "*.scss",
+                "*.css"
+            ],
+            "options": {
+                "parser": "scss"
+            }
+        },
+        {
+            "files": [
+                "*.yml",
+                "*.yaml"
+            ],
+            "options": {
+                "parser": "yaml",
+                "tabWidth": 2,
+                "proseWrap": "preserve"
+            }
+        }
+    ]
+}

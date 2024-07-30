@@ -1,0 +1,121 @@
+// colors
+$black: #000000;
+$white: #ffffff;
+$porcelain-light: #f1f3f4;
+$porcelain: #f7f8f9;
+$light-silver: #d8d8d8;
+$seashell: #f1f1f1;
+$concrete: #f2f2f2;
+$iron: #e4e6e7;
+$silver-chalice: #aaaaaa;
+$gray: #898989;
+$dove-gray: #6b6b6b;
+$tundora: #4d4d4d;
+$persian-blue: #261ccd;
+$mine-shaft-secondary: #252525;
+$mine-shaft: #2f2f2f;
+$nero: #252525;
+$dodger-blue: #5a50ff;
+$thunder: #231f20;
+$limed-spruce: #3a4850;
+$abbey: #494c4f;
+$silver: #c4c4c4;
+$palladium: #b0b0b0;
+$cod-gray: #0f0f0f;
+$gallery: #efefef;
+$blue-zodiac: #0a1f37;
+$alto: #dedede;
+$cornflower-blue: #f7f8f9;
+$err: #ed4337;
+
+$cell-size: 140px;
+$token-size: calc(#{$cell-size} - 24px);
+
+$laser-primary: #b60071;
+$laser-secondary: #ff47b9;
+$laser-tertiary: #7a004b;
+$target-primary: #52a451;
+$target-secondary: #7dbe7c;
+$target-tertiary: #204120;
+$mirror-primary: #088395;
+$mirror-secondary: #37b7c3;
+$mirror-tertiary: #065c69;
+$blocker-primary: #493c3c;
+$blocker-secondary: #655353;
+$checkpoint-primary: #f3f9c4;
+$checkpoint-secondary: #e2f172;
+$checkpoint-tertiary: #a3b612;
+
+$tablet: '768px';
+$tablet-l: '1024px';
+$desktop: '1280px';
+$desktop-l: '1440px';
+$navbar-size: 54px;
+$side-space: 16px;
+
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tablet-l {
+  @media (min-width: $tablet-l) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin desktop-l {
+  @media (min-width: $desktop-l) {
+    @content;
+  }
+}
+
+@mixin desktop-extra-large {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin absTopCenter {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.optimaxBody {
+  --navbar-size: 54px;
+  --side-space: 16px;
+
+  @include tablet() {
+    --navbar-size: 80px;
+    --side-space: 24px;
+  }
+
+  @include tablet-l() {
+    --side-space: 40px;
+  }
+
+  @include desktop() {
+    --side-space: auto;
+  }
+}

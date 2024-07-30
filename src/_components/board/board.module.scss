@@ -1,0 +1,30 @@
+@import '@/variables';
+
+.boardWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+  margin-top: 80px;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(5, $cell-size);
+  grid-template-rows: repeat(5, $cell-size);
+  justify-content: center;
+}
+
+.cell {
+  @include flexCenter;
+  width: $cell-size;
+  height: $cell-size;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.waitingRoom {
+  //   border: 1px solid black;
+  //   border-radius: 8px;
+  padding: 11px;
+}

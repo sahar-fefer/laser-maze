@@ -1,0 +1,16 @@
+@import '@/variables';
+
+.dndToken {
+  cursor: grab;
+
+  &.hover {
+  }
+}
+
+.drag,
+.drag:active {
+  cursor: grabbing !important;
+}
+
+.drag:hover {
+}
